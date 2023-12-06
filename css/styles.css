@@ -1,0 +1,95 @@
+
+/* formatação do corpo */
+/* --------------------*/
+
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif; /* na ausência da fonte do Google, usar sans-serif */
+}
+
+body a {
+    text-decoration: none; /*para remover o underline de links do bootstrap */
+}
+
+/* formatação do rodapé */
+/* -------------------- */
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 0px;
+    box-shadow: 0px 5px 10px 1px black;
+}
+
+/* formatação dos botões do rodapé */
+/* ------------------------------- */
+
+.button {
+    width: 50%; /* espaço ocupado por cada botão */
+    height: 50px; /* altura do botão */
+    background-color:white; /* cor de fundo do botão */
+    padding: 0px; /*para a área do botão ocupar 100%  dos limites do botão */
+    cursor: pointer;
+    border-right:1px solid #aaaaaa; /* cria uma divisória entre os dois botões */
+    border-left:1px solid #aaaaaa; /* cria uma divisória entre os dois botões */
+     /*border-radius: 5px;*/ /* arredondar a borda dos botões */
+    color: black; /* Definindo a cor inicial do texto */
+    font-size: 20px; /* tamanho do texto do botão */
+}
+
+.button a {
+    width: 100%;
+    height: 100%;
+    color: black; /* cor do texto dos botões */
+    display: flex; /* centraliza verticalmente o texto do botão */
+    justify-content: center; /* centraliza horizonalmente o texto do botão */
+    align-items: center; /* centraliza verticalmente o texto do botão */
+    /*border-radius: 5px;*/ /* arredondar a borda dos botões */
+}
+
+.button:hover,
+.button:hover a {
+    background-color: black;
+    color: white; /* Alterando a cor do texto no estado de hover */
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* formatação da lista de usuarios */
+/* ------------------------------- */
+
+.usuario {
+    display: flex; /* posiciona o nome do usuário ao lado da imagem do usuário */
+    align-items: center; /* alinha o nome do usuário verticalmente à imagem do usuário */
+    padding: 0px;
+    transition: background-color 0.2s, color 0.2s; /* tempo de transição da cor quando o muse paira sobre o nome do usuário */
+    /* border-radius: 5px; */ /*fica melhor sem border radius */
+    font-size: 25px; /* tamanho da fonte dos nomes dos usuários */
+    color: black; /* cor do texto do nome do usuário */
+}
+
+.usuario:hover {
+    background-color: black; /* cor de fundo quando o mouse paira sobre o nome do usuário */
+    color: white;/* cor do texto quando o mouse paira sobre o nome do usuário */
+}
+
+.usuario:hover img {
+    filter: invert(100%); /* inverte a cor do svg de preto para branco quando o mouse paira sobre o usuário */
+}
+
+.usuario-imagem {
+    width: 100px;
+    height: 100px;
+    margin-right: 0px;
+}
+
+/* formatação dos limites superior e inferior onde está a lista de usuários */
+/* ------------------------------------------------------------------------ */
+
+#content {
+    margin-top: 60px; /* Para evitar que o conteúdo fique oculto pelo cabeçalho fixo ao fazer o scroll */
+    margin-bottom: 50px; /* Para evitar que o conteúdo fique oculto pelo rodapé fixo ao fazer o scroll */
+}
